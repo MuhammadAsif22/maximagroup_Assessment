@@ -1,0 +1,41 @@
+<div class="container" *ngIf="Admin">
+  <div class="header">
+    <app-header></app-header>
+  </div>
+  <div class="main-container">
+    <div class="side-nav">
+      <app-side-nav [Admin]="Admin"></app-side-nav>
+    </div>
+    <div class="main">
+      <div class="top-section">
+        <app-top-widgets></app-top-widgets>
+      </div>
+      <app-user-information
+        [email]="Email"
+        [name]="Name"
+        [mobileNo]="MobileNo"
+        [address]="Address"
+      ></app-user-information>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="!Admin">
+  <div class="header">
+    <app-header></app-header>
+  </div>
+  <div class="main-container">
+    <div class="Cside-nav">
+      <app-side-nav [Admin]="Admin"></app-side-nav>
+    </div>
+    <div class="main">
+      <h1 class="dashboard">Dashboard</h1>
+      <app-user-information
+        [name]="Name"
+        [email]="Email"
+        [mobileNo]="MobileNo"
+        [address]="Address"
+      ></app-user-information>
+    </div>
+  </div>
+</div>

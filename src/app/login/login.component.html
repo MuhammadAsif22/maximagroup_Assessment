@@ -1,0 +1,27 @@
+<body>
+  <div class="login-page">
+    <div class="form">
+      <div class="login">
+        <div class="login-header">
+          <h3>LOGIN</h3>
+        </div>
+      </div>
+      <form class="login-form" [formGroup]="form">
+        <input
+          type="text"
+          formControlName="Email"
+          id="Email"
+          placeholder="Email"
+        />
+        <input
+          type="password"
+          formControlName="Password"
+          id="password"
+          placeholder="Password"
+        />
+        <button type="button" (click)="login()" value="click">login</button>
+        <p class="message">Not registered? <a href="">Create an account</a></p>
+      </form>
+    </div>
+  </div>
+</body>
